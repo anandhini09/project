@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Strength Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light">
+  <div class="container">
+    <h1>Password Strength Checker</h1>
+
+    <div class="input-group">
+      <label for="password">Enter Password:</label>
+      <input type="password" id="password" placeholder="Type a password..." />
+      <div id="strength-meter"></div>
+      <p id="strength-text">Strength: </p>
+    </div>
+
+    <div class="input-group">
+      <h2>Generate Secure Password</h2>
+      <label><input type="checkbox" id="include-uppercase" checked /> Uppercase</label>
+      <label><input type="checkbox" id="include-numbers" checked /> Numbers</label>
+      <label><input type="checkbox" id="include-symbols" checked /> Symbols</label>
+      <label>Length: <input type="number" id="length" value="12" min="6" max="32" /></label>
+      <button onclick="generatePassword()">Generate Password</button>
+      <input type="text" id="generated-password" readonly />
+      <button onclick="copyToClipboard()">Copy to Clipboard</button>
+    </div>
+
+    <button onclick="toggleTheme()">🌙 Toggle Theme</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
